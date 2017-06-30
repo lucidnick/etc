@@ -1,0 +1,12 @@
+TARGETS = apache-htcacheclean unattended-upgrades whoopsie uuidd alsa-utils apache2 ufw kerneloops irqbalance mysql openbsd-inetd thermald speech-dispatcher ntp bluetooth resolvconf lightdm cups-browsed cups saned plymouth urandom avahi-daemon sendsigs rsyslog umountnfs.sh hwclock.sh rpcbind networking umountfs umountroot halt reboot
+avahi-daemon: cups-browsed saned
+sendsigs: kerneloops apache-htcacheclean alsa-utils avahi-daemon irqbalance bluetooth cups-browsed mysql openbsd-inetd plymouth unattended-upgrades thermald speech-dispatcher uuidd lightdm apache2
+rsyslog: kerneloops apache-htcacheclean avahi-daemon irqbalance bluetooth cups-browsed sendsigs mysql openbsd-inetd thermald speech-dispatcher apache2 cups saned whoopsie ntp
+umountnfs.sh: kerneloops apache-htcacheclean alsa-utils avahi-daemon irqbalance bluetooth cups-browsed rsyslog mysql openbsd-inetd sendsigs plymouth unattended-upgrades thermald speech-dispatcher uuidd lightdm apache2
+hwclock.sh: kerneloops cups-browsed rsyslog mysql uuidd
+rpcbind: umountnfs.sh
+networking: kerneloops cups-browsed mysql umountnfs.sh rpcbind lightdm apache2
+umountfs: kerneloops apache-htcacheclean alsa-utils avahi-daemon urandom irqbalance bluetooth cups-browsed resolvconf mysql hwclock.sh openbsd-inetd umountnfs.sh plymouth unattended-upgrades thermald rpcbind speech-dispatcher networking uuidd lightdm apache2
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot

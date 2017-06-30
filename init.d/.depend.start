@@ -1,0 +1,27 @@
+TARGETS = rsyslog uuidd killprocs binfmt-support apport apache2 single kerneloops dbus irqbalance mysql openbsd-inetd thermald speech-dispatcher ssh cron anacron rsync acpid ntp avahi-daemon bluetooth lightdm cups-browsed cups saned plymouth rc.local grub-common ondemand
+INTERACTIVE = apache2
+apache2: rsyslog
+single: killprocs
+kerneloops: rsyslog
+dbus: rsyslog
+irqbalance: rsyslog
+mysql: rsyslog
+openbsd-inetd: rsyslog
+thermald: rsyslog
+speech-dispatcher: rsyslog
+ssh: rsyslog
+cron: rsyslog
+anacron: rsyslog
+rsync: rsyslog
+acpid: rsyslog
+ntp: rsyslog
+avahi-daemon: dbus rsyslog
+bluetooth: rsyslog dbus
+lightdm: dbus acpid
+cups-browsed: rsyslog
+cups: rsyslog
+saned: rsyslog dbus
+plymouth: kerneloops rsyslog avahi-daemon dbus irqbalance bluetooth cups-browsed mysql openbsd-inetd thermald speech-dispatcher uuidd lightdm apache2 cups saned binfmt-support ssh apport cron anacron rsync acpid ntp
+rc.local: kerneloops rsyslog avahi-daemon dbus irqbalance bluetooth cups-browsed mysql openbsd-inetd thermald speech-dispatcher uuidd lightdm apache2 cups saned binfmt-support ssh apport cron anacron rsync acpid ntp
+grub-common: kerneloops rsyslog avahi-daemon dbus irqbalance bluetooth cups-browsed mysql openbsd-inetd thermald speech-dispatcher uuidd lightdm apache2 cups saned binfmt-support ssh apport cron anacron rsync acpid ntp
+ondemand: kerneloops rsyslog avahi-daemon dbus irqbalance bluetooth cups-browsed mysql openbsd-inetd thermald speech-dispatcher uuidd lightdm apache2 cups saned binfmt-support ssh apport cron anacron rsync acpid ntp

@@ -1,0 +1,31 @@
+[connection]
+id=OPPO m59A
+uuid=d88c6d5e-a2db-49b9-857a-700e3d06a005
+type=wifi
+permissions=user:nick:;
+secondaries=
+
+[wifi]
+mac-address=20:7C:8F:7B:94:CF
+mac-address-blacklist=
+mac-address-randomization=0
+mode=infrastructure
+seen-bssids=
+ssid=OPPO m59A
+
+[wifi-security]
+auth-alg=open
+group=
+key-mgmt=wpa-psk
+pairwise=
+proto=
+psk=123456789n4
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+method=auto

@@ -1,0 +1,23 @@
+[connection]
+id=TOTOLINK N300RH
+uuid=82d08da9-8cd9-4e3c-ade0-65e03f797a49
+type=wifi
+permissions=user:root:;
+secondaries=
+
+[wifi]
+mac-address=20:7C:8F:7B:94:CF
+mac-address-blacklist=
+mac-address-randomization=0
+mode=infrastructure
+seen-bssids=
+ssid=TOTOLINK N300RH
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+method=auto

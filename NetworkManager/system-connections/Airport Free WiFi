@@ -1,0 +1,23 @@
+[connection]
+id=Airport Free WiFi
+uuid=66fa072b-b911-4dd0-8353-01b0918e3f36
+type=wifi
+permissions=user:root:;
+secondaries=
+
+[wifi]
+mac-address=20:7C:8F:7B:94:CF
+mac-address-blacklist=
+mac-address-randomization=0
+mode=infrastructure
+seen-bssids=
+ssid=Airport Free WiFi
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+method=auto

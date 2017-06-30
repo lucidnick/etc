@@ -1,0 +1,33 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda10 during installation
+UUID=424ba791-51a0-43d0-96ba-4311b07992c0 /               ext4   defaults,noatime,barrier=0,nobh,errors=remount-ro 0       1
+# /boot was on /dev/sda6 during installation
+UUID=80ceac6d-35f4-4ba0-a3e1-5f468ca40c92 /boot           ext4    defaults        0       0
+# /c was on /dev/sda2 during installation
+UUID=C2E6225FE62253C7 /c              ntfs    defaults,umask=007,gid=46 0       0
+# /d was on /dev/sda3 during installation
+#UUID=1256D07956D05F53 /d              ntfs    defaults,umask=007,gid=46 0       0
+# /home was on /dev/sda11 during installation
+UUID=468004a8-e3a7-4e6b-bb92-b74d9cbcec9e /home           ext4    defaults,noatime,data=writeback,barrier=0,nobh        0       0
+# /root was on /dev/sda12 during installation
+UUID=841416d2-8fe6-4c4f-98c1-27ef15d71a1d /root           ext4    defaults,noatime,data=writeback,barrier=0,nobh        0       0
+# /tmp was on /dev/sda7 during installation
+# UUID=29aa0dcc-24dc-4211-a20d-5746c790bf0f /tmp            ext4    defaults        0       0
+tmpfs    /tmp    tmpfs    defaults,noatime,mode=1777   0  0
+# /usr was on /dev/sda8 during installation
+UUID=f0a8cf26-8fe2-4560-90a3-175705a9e24d /usr            ext4    defaults,noatime,data=writeback,barrier=0,nobh        0       0
+# /var was on /dev/sda9 during installation
+UUID=de0d7c3e-2b4c-46d8-980e-7db303b18d1b /var            ext4    defaults,noatime,data=writeback,barrier=0,nobh        0       0
+# swap was on /dev/sda5 during installation
+#UUID=98cc53b2-15b1-4e3c-9847-4f58f75b9f87 none            swap    sw              0       0
+
+tmpfs   /tmp       tmpfs   defaults,noatime,mode=1777   0  0
+tmpfs   /var/spool tmpfs   defaults,noatime,mode=1777   0  0
+#tmpfs   /var/tmp   tmpfs   defaults,noatime,mode=1777   0  0
+tmpfs   /var/log   tmpfs   defaults,noatime,mode=0755   0  0
